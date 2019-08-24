@@ -1,6 +1,13 @@
  # Add  code here!
-def prime_number
-  puts expect(prime?(1)).to be(true)  
-  expect(prime?(2)).to be(true)
-  expect(prime?(3)).to be(true)
+
+def prime?(num)
+  if num < 0 or num == 0 or num == 1
+    return false
+  else
+    (2..num-1).to_a.all? do |possible_factor|
+      num % possible_factor != 0
+    end
+  end
 end
+
+puts prime?(105557)
