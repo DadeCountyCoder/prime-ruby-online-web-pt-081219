@@ -1,3 +1,3 @@
 # Add  code here!
 def prime_number
-  puts 
+  puts expect(prime?(2)).to be(true)
